@@ -20,10 +20,10 @@
 --
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
-DROP TABLE IF EXISTS `authors`;
+DROP TABLE IF EXISTS `Authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `authors` (
+CREATE TABLE `Authors` (
   `author_id` int NOT NULL AUTO_INCREMENT,
   `author_name` varchar(215) NOT NULL,
   PRIMARY KEY (`author_id`)
@@ -34,7 +34,7 @@ CREATE TABLE `authors` (
 -- Dumping data for table `authors`
 --
 
-LOCK TABLES `authors` WRITE;
+LOCK TABLES `Authors` WRITE;
 /*!40000 ALTER TABLE `authors` DISABLE KEYS */;
 /*!40000 ALTER TABLE `authors` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -43,10 +43,10 @@ UNLOCK TABLES;
 -- Table structure for table `books`
 --
 
-DROP TABLE IF EXISTS `books`;
+DROP TABLE IF EXISTS `Books`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `books` (
+CREATE TABLE `Books` (
   `book_id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(130) NOT NULL,
   `author_id` int NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE `books` (
 -- Dumping data for table `books`
 --
 
-LOCK TABLES `books` WRITE;
+LOCK TABLES `Books` WRITE;
 /*!40000 ALTER TABLE `books` DISABLE KEYS */;
 /*!40000 ALTER TABLE `books` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -71,10 +71,10 @@ UNLOCK TABLES;
 -- Table structure for table `customers`
 --
 
-DROP TABLE IF EXISTS `customers`;
+DROP TABLE IF EXISTS `Customers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `customers` (
+CREATE TABLE `Customers` (
   `customer_id` int NOT NULL AUTO_INCREMENT,
   `customer_name` varchar(215) NOT NULL,
   `email` varchar(215) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE `customers` (
 -- Dumping data for table `customers`
 --
 
-LOCK TABLES `customers` WRITE;
+LOCK TABLES `Customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -96,10 +96,10 @@ UNLOCK TABLES;
 -- Table structure for table `order_details`
 --
 
-DROP TABLE IF EXISTS `order_details`;
+DROP TABLE IF EXISTS `Order_Details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `order_details` (
+CREATE TABLE `Order_Details` (
   `orderdetailid` int NOT NULL AUTO_INCREMENT,
   `order_id` int NOT NULL,
   `book_id` int NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `order_details` (
 -- Dumping data for table `order_details`
 --
 
-LOCK TABLES `order_details` WRITE;
+LOCK TABLES `Order_Details` WRITE;
 /*!40000 ALTER TABLE `order_details` DISABLE KEYS */;
 /*!40000 ALTER TABLE `order_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -125,10 +125,10 @@ UNLOCK TABLES;
 -- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `orders`;
+DROP TABLE IF EXISTS `Orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `orders` (
+CREATE TABLE `Orders` (
   `order_id` int NOT NULL AUTO_INCREMENT,
   `customer_id` int NOT NULL,
   `order_date` date DEFAULT NULL,
@@ -142,7 +142,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-LOCK TABLES `orders` WRITE;
+LOCK TABLES `Orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
