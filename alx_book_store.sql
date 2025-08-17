@@ -23,11 +23,10 @@ USE alx_book_store;
 DROP TABLE IF EXISTS `Authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Authors` (
-  `author_id` int NOT NULL AUTO_INCREMENT,
-  `author_name` varchar(215) NOT NULL,
-  PRIMARY KEY (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `Authors` (author_id INT NOT NULL AUTO_INCREMENT,
+    author_name VARCHAR(215) NOT NULL,
+    PRIMARY KEY (author_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
